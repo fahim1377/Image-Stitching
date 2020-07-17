@@ -95,10 +95,13 @@ def stitchIm(kps1,kps2,rgb_im1,rgb_im2,h):
     for i in range(0,size_im2[0]):
         for j in range(0,size_im2[1]):
             for k in range(3):
-                xnew = int( ((h[0,0]*j)+(h[0,1]*i)+h[0,2]) /
-                            ((h[2,0]*j)+(h[2,1]*i)+h[2,2]))
-                ynew = int( ((h[1,0]*j)+(h[1,1]*i)+h[1,2])
-                            /((h[2,0]*j)+(h[2,1]*i)+h[2,2]))
+                # xnew = int( ((h[0,0]*j)+(h[0,1]*i)+h[0,2]) /
+                #             ((h[2,0]*j)+(h[2,1]*i)+h[2,2]))
+                # ynew = int( ((h[1,0]*j)+(h[1,1]*i)+h[1,2])
+                #             /((h[2,0]*j)+(h[2,1]*i)+h[2,2]))
+                xnew = int( ((h[0,0]*j)+(h[0,1]*i)+h[0,2]) )
+                ynew = int( ((h[1,0]*j)+(h[1,1]*i)+h[1,2]))
+
                 xnew += int(S/2)*size_im2[1]
                 ynew += int(S/2)*size_im2[0]
                 res_im[ynew,xnew,k] = rgb_im2[i,j,k]

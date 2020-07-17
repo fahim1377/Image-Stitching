@@ -4,6 +4,33 @@ import cv2
 from src.sttitching import *
 
 
+def findBesMatch(imgs):
+    kps   = []
+    deses = []
+    for i,img in enumerate(imgs):
+        surf     = cv2.xfeatures2d.SURF_create(400)
+        img1 = img1.astype('uint8')
+        kp, des = surf.detectAndCompute(img1,None)
+        kps.append(kp)
+        deses.append(des)
+    n = len(kps)
+    bestNum = 0
+    best = (0,1)
+    for i in range(n-1):
+        for j in range(i+1,n-1):
+            # BFMatcher with default params
+            bf      = cv2.BFMatcher()
+            matches = bf.knnMatch(deses[i],deses[j],k=2)
+            good_matches = []
+            for m,n in matches:
+                if m.distance < 0.25*n.distance:
+                    good_matches.append([m])
+            if len(good_matches) > bestNum:
+                best = (i,j)
+                bestNum = len(good_matches)
+
+    return imgs[i],imgs[j],kps[i],kps[j]
+
 
 def stitch(img1,img2):
     surf     = cv2.xfeatures2d.SURF_create(400)
@@ -16,15 +43,16 @@ def stitch(img1,img2):
     matches = bf.knnMatch(des1,des2,k=2)
     good_matches = []
     for m,n in matches:
-        if m.distance < 0.75*n.distance:
+        if m.distance < 0.25*n.distance:
             good_matches.append([m])
     # good_matches = matches
     # Select good matched keypoints
+    print(len(good_matches))
     matched_kpts1   = np.float32([kp1[m[0].queryIdx].pt for m in good_matches])
     matched_kpts2   = np.float32([kp2[m[0].trainIdx].pt for m in good_matches])
     # Compute homography
-    H, status    = cv2.findHomography(matched_kpts2, matched_kpts1, cv2.RANSAC,10)
-    # H = cv2.getPerspectiveTransform(matched_kpts2[:4], matched_kpts1[:4])
+    # H, status    = cv2.findHomography(matched_kpts2, matched_kpts1, cv2.RANSAC,10)
+    H = cv2.getAffineTransform(matched_kpts2[:3], matched_kpts1[:3])
     print(H)
 
     # Warp image
@@ -32,6 +60,10 @@ def stitch(img1,img2):
     res_im = stitchIm(matched_kpts1,matched_kpts2,img1,img2,H)
 
     return res_im
+
+
+
+
 
 def main():
     mountains = ['Mountain_2','Mountain_1','Mountain_3','Mountain_5','Mountain_4','Mountain_6','Mountain_7']
