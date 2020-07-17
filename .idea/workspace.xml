@@ -2,15 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c4edb8a4-b119-4d3a-84e0-eacf0759eff4" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/images/results/resultMountain_1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/images/results/resultMountain_1.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/results/resultMountain_3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/images/results/resultMountain_3.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/results/resultMountain_4.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/images/results/resultMountain_4.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/results/resultMountain_5.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/images/results/resultMountain_5.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/results/resultMountain_6.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/images/results/resultMountain_6.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/results/resultMountain_7.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/images/results/resultMountain_7.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/final.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/final.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/res.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/res.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sttitching.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/sttitching.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/final2.py" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -25,16 +17,29 @@
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/final$final.coverage" NAME="final Coverage Results" MODIFIED="1595023439565" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
+    <SUITE FILE_PATH="coverage/final$final2.coverage" NAME="final2 Coverage Results" MODIFIED="1595024623909" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="final.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="final.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/final.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-352">
-              <caret line="4" selection-start-line="4" selection-end-line="4" />
+            <state relative-caret-position="176">
+              <caret line="40" column="4" selection-start-line="40" selection-start-column="4" selection-end-line="45" selection-end-column="4" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="final2.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/final2.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="176">
+              <caret line="8" column="16" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="16" />
+              <folding>
+                <element signature="e#0#10#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -76,6 +81,7 @@
       <list>
         <option value="$PROJECT_DIR$/src/sttitching.py" />
         <option value="$PROJECT_DIR$/src/final.py" />
+        <option value="$PROJECT_DIR$/src/final2.py" />
       </list>
     </option>
   </component>
@@ -154,7 +160,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Python.final2">
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
     </configuration>
@@ -193,6 +199,25 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
     </configuration>
+    <configuration name="final2" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="project_final" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/src" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/src/final2.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
@@ -215,8 +240,13 @@
       <properties />
       <listeners />
     </configuration>
+    <list>
+      <item itemvalue="Python.final" />
+      <item itemvalue="Python.final2" />
+    </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.final2" />
         <item itemvalue="Python.final" />
       </list>
     </recent_temporary>
@@ -235,12 +265,12 @@
       <workItem from="1594873165832" duration="6304000" />
       <workItem from="1594891915870" duration="45171000" />
       <workItem from="1594974791805" duration="2931000" />
-      <workItem from="1595022918008" duration="559000" />
+      <workItem from="1595022918008" duration="1862000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="65801000" />
+    <option name="totallyTimeSpent" value="67104000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -253,7 +283,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1486" height="878" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="Tool Output" order="7" weight="0.32884097" />
@@ -273,7 +302,7 @@
       <window_info id="Image Layers" order="2" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32884097" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.43261456" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.43261456" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.32884097" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.12692848" />
       <window_info anchor="bottom" id="Find" order="1" />
@@ -391,10 +420,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/final.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-352">
-          <caret line="4" selection-start-line="4" selection-end-line="4" />
+        <state relative-caret-position="176">
+          <caret line="40" column="4" selection-start-line="40" selection-start-column="4" selection-end-line="45" selection-end-column="4" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/final2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="8" column="16" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="16" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
           </folding>
         </state>
       </provider>
