@@ -82,11 +82,11 @@ def normalizeimg(img,min,max):
     return img
 
 
-def stitchIm(kps1,kps2,rgb_im1,rgb_im2,h):
+def stitchIm(rgb_im1,rgb_im2,h):
     size_im1 = rgb_im1.shape
 
     size_im2 = rgb_im2.shape
-    S = 2
+    S = 8
     res_im = np.ones((int(size_im1[1]+S*size_im2[1]),int(size_im1[0]+S*size_im2[0]),3),dtype=np.uint8)
     print(res_im.shape)
     res_im[int(S/2)*rgb_im2.shape[0]:int(S/2)*rgb_im2.shape[0] + rgb_im1.shape[0]
@@ -94,17 +94,17 @@ def stitchIm(kps1,kps2,rgb_im1,rgb_im2,h):
 
     for i in range(0,size_im2[0]):
         for j in range(0,size_im2[1]):
+            # xnew = int( ((h[0,0]*j)+(h[0,1]*i)+h[0,2]) /
+            #             ((h[2,0]*j)+(h[2,1]*i)+h[2,2]))
+            # ynew = int( ((h[1,0]*j)+(h[1,1]*i)+h[1,2])
+            #             /((h[2,0]*j)+(h[2,1]*i)+h[2,2]))
+            xnew = int( ((h[0,0]*j)+(h[0,1]*i)+h[0,2]) )
+            ynew = int( ((h[1,0]*j)+(h[1,1]*i)+h[1,2]))
+            xnew += int(S/2)*size_im2[1]
+            ynew += int(S/2)*size_im2[0]
             for k in range(3):
-                # xnew = int( ((h[0,0]*j)+(h[0,1]*i)+h[0,2]) /
-                #             ((h[2,0]*j)+(h[2,1]*i)+h[2,2]))
-                # ynew = int( ((h[1,0]*j)+(h[1,1]*i)+h[1,2])
-                #             /((h[2,0]*j)+(h[2,1]*i)+h[2,2]))
-                xnew = int( ((h[0,0]*j)+(h[0,1]*i)+h[0,2]) )
-                ynew = int( ((h[1,0]*j)+(h[1,1]*i)+h[1,2]))
-
-                xnew += int(S/2)*size_im2[1]
-                ynew += int(S/2)*size_im2[0]
-                res_im[ynew,xnew,k] = rgb_im2[i,j,k]
+                if(rgb_im2[i,j,k]!=1):
+                    res_im[ynew,xnew,k] = rgb_im2[i,j,k]
         # print("row")
     xmax = np.argmax(res_im, axis=1)
     minRow = 0
@@ -145,7 +145,7 @@ def stitchIm(kps1,kps2,rgb_im1,rgb_im2,h):
     # max = np.max(showRES)
     # showRES = normalizeimg(showRES,min,max)
 
-    res_im = max_filter(res_im,(3,3))
+    # res_im = max_filter(res_im,(5,5))
     # print("median1")
     cv2.imwrite("res.jpg",res_im)
     # cv2.imwrite("freqRes.jpg",showRES)
