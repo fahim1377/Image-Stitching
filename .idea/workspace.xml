@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c4edb8a4-b119-4d3a-84e0-eacf0759eff4" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/images/results/resultMountain_1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/images/results/resultMountain_1.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/images/results/resultMountain_3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/images/results/resultMountain_3.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/images/results/resultMountain_4.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/images/results/resultMountain_4.jpg" afterDir="false" />
@@ -25,15 +24,15 @@
     <option name="optimizeImportsOnTheFly" value="true" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/final$final.coverage" NAME="final Coverage Results" MODIFIED="1594977367479" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
+    <SUITE FILE_PATH="coverage/final$final.coverage" NAME="final Coverage Results" MODIFIED="1595023439565" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/src" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="final.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/final.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-396">
-              <caret line="34" column="6" lean-forward="true" selection-start-line="34" selection-start-column="6" selection-end-line="34" selection-end-column="6" />
+            <state relative-caret-position="-352">
+              <caret line="4" selection-start-line="4" selection-end-line="4" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
@@ -44,8 +43,13 @@
       <file leaf-file-name="sttitching.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/sttitching.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="249">
-              <caret line="94" column="34" selection-start-line="94" selection-start-column="34" selection-end-line="94" selection-end-column="34" />
+            <state relative-caret-position="197">
+              <caret line="69" selection-start-line="69" selection-end-line="69" />
+              <folding>
+                <element signature="e#85#1528#0" />
+                <element signature="e#1569#2106#0" />
+                <element signature="e#2145#2682#0" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -86,7 +90,7 @@
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="445" />
-    <option name="y" value="76" />
+    <option name="y" value="75" />
     <option name="width" value="930" />
     <option name="height" value="1090" />
   </component>
@@ -117,10 +121,10 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Course" />
       <pane id="Scope" />
       <pane id="AndroidView" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -231,11 +235,12 @@
       <workItem from="1594873165832" duration="6304000" />
       <workItem from="1594891915870" duration="45171000" />
       <workItem from="1594974791805" duration="2931000" />
+      <workItem from="1595022918008" duration="559000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="65242000" />
+    <option name="totallyTimeSpent" value="65801000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -248,37 +253,38 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1486" height="878" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.32884097" />
       <window_info anchor="bottom" id="Tool Output" order="7" weight="0.32884097" />
-      <window_info anchor="right" id="Palette&#9;" order="3" />
-      <window_info id="Image Layers" order="2" />
-      <window_info anchor="right" id="Capture Analysis" order="3" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="right" id="Maven Projects" order="3" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="7" weight="0.32884097" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.43261456" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.32884097" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.12552595" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="bottom" id="ANTLR Preview" order="7" weight="0.32884097" />
-      <window_info anchor="right" id="SciView" order="3" visible="true" weight="0.17461431" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.43396226" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32884097" />
+      <window_info anchor="right" id="Palette&#9;" order="3" />
+      <window_info id="Image Layers" order="2" />
+      <window_info anchor="right" id="Capture Analysis" order="3" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.32884097" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.43261456" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.32884097" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.12692848" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="right" id="SciView" order="3" visible="true" weight="0.17461431" />
       <window_info anchor="right" id="Theme Preview" order="3" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.43396226" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -298,6 +304,28 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/final.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="748">
+          <caret line="34" column="6" lean-forward="true" selection-start-line="34" selection-start-column="6" selection-end-line="34" selection-end-column="6" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/sttitching.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2002">
+          <caret line="94" column="34" selection-start-line="94" selection-start-column="34" selection-end-line="94" selection-end-column="34" />
+          <folding>
+            <element signature="e#85#1528#0" />
+            <element signature="e#1569#2106#0" />
+            <element signature="e#2145#2682#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/final.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="396">
@@ -351,15 +379,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/sttitching.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="249">
-          <caret line="94" column="34" selection-start-line="94" selection-start-column="34" selection-end-line="94" selection-end-column="34" />
+        <state relative-caret-position="197">
+          <caret line="69" selection-start-line="69" selection-end-line="69" />
+          <folding>
+            <element signature="e#85#1528#0" />
+            <element signature="e#1569#2106#0" />
+            <element signature="e#2145#2682#0" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/final.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-396">
-          <caret line="34" column="6" lean-forward="true" selection-start-line="34" selection-start-column="6" selection-end-line="34" selection-end-column="6" />
+        <state relative-caret-position="-352">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
           </folding>

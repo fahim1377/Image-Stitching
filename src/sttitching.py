@@ -68,19 +68,6 @@ def max_filter(img,sizeWindow):
                     res[i,j,k] = window[int(sizeWindow[0]*sizeWindow[1])-1]
     return res
 
-def toPolar(F):
-    FA = abs(F)
-    FP = np.zeros(F.shape,dtype=float)
-    for i in range(0,F.shape[0]):
-        for j in range(0,F.shape[1]):
-            FP[i,j] = cmath.phase(F[i,j])
-    return FA,FP
-
-
-def normalizeimg(img,min,max):
-    img = (img-min)/(max-min)*255
-    return img
-
 
 def stitchIm(kps1,kps2,rgb_im1,rgb_im2,h):
     size_im1 = rgb_im1.shape
@@ -94,18 +81,16 @@ def stitchIm(kps1,kps2,rgb_im1,rgb_im2,h):
 
     for i in range(0,size_im2[0]):
         for j in range(0,size_im2[1]):
+            xnew = int( ((h[0,0]*j)+(h[0,1]*i)+h[0,2]) /
+                        ((h[2,0]*j)+(h[2,1]*i)+h[2,2]))
+            ynew = int( ((h[1,0]*j)+(h[1,1]*i)+h[1,2])
+                        /((h[2,0]*j)+(h[2,1]*i)+h[2,2]))
+            # xnew = int( ((h[0,0]*j)+(h[0,1]*i)+h[0,2]) )
+            # ynew = int( ((h[1,0]*j)+(h[1,1]*i)+h[1,2]))
+            xnew += int(S/2)*size_im2[1]
+            ynew += int(S/2)*size_im2[0]
             for k in range(3):
-                # xnew = int( ((h[0,0]*j)+(h[0,1]*i)+h[0,2]) /
-                #             ((h[2,0]*j)+(h[2,1]*i)+h[2,2]))
-                # ynew = int( ((h[1,0]*j)+(h[1,1]*i)+h[1,2])
-                #             /((h[2,0]*j)+(h[2,1]*i)+h[2,2]))
-                xnew = int( ((h[0,0]*j)+(h[0,1]*i)+h[0,2]) )
-                ynew = int( ((h[1,0]*j)+(h[1,1]*i)+h[1,2]))
-
-                xnew += int(S/2)*size_im2[1]
-                ynew += int(S/2)*size_im2[0]
                 res_im[ynew,xnew,k] = rgb_im2[i,j,k]
-        # print("row")
     xmax = np.argmax(res_im, axis=1)
     minRow = 0
     for i in range(xmax.shape[0]):
@@ -145,7 +130,7 @@ def stitchIm(kps1,kps2,rgb_im1,rgb_im2,h):
     # max = np.max(showRES)
     # showRES = normalizeimg(showRES,min,max)
 
-    res_im = max_filter(res_im,(3,3))
+    # res_im = max_filter(res_im,(3,3))
     # print("median1")
     cv2.imwrite("res.jpg",res_im)
     # cv2.imwrite("freqRes.jpg",showRES)
