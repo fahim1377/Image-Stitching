@@ -43,7 +43,7 @@ def main():
     offices = ['office-00','office-01','office-02','office-03']
     towers = ['Tower_2','Tower_1']
     yards = ['yard-04','yard-05','yard-03','yard-02','yard-01','yard-06','yard-07','yard-08']
-    imlist = mountains
+    imlist = towers
     ref_im = cv2.imread('../images/Input/{}.jpg'.format(imlist[0]))
     for i,imName in enumerate(imlist[1:]):
         scene_im = cv2.imread('../images/Input/{}.jpg'.format(imName))

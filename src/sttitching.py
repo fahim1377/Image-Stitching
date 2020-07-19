@@ -73,7 +73,7 @@ def stitchIm(kps1,kps2,rgb_im1,rgb_im2,h):
     size_im1 = rgb_im1.shape
 
     size_im2 = rgb_im2.shape
-    S = 2
+    S = 4
     res_im = np.ones((int(size_im1[1]+S*size_im2[1]),int(size_im1[0]+S*size_im2[0]),3),dtype=np.uint8)
     print(res_im.shape)
     res_im[int(S/2)*rgb_im2.shape[0]:int(S/2)*rgb_im2.shape[0] + rgb_im1.shape[0]

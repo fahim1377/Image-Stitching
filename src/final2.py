@@ -6,7 +6,7 @@ mountains = ['Mountain_2','Mountain_1','Mountain_3','Mountain_5','Mountain_4','M
 offices = ['office-00','office-01','office-02','office-03']
 towers = ['Tower_2','Tower_1']
 yards = ['yard-04','yard-05','yard-03','yard-02','yard-01','yard-06','yard-07','yard-08']
-imlist = offices
+imlist = yards
 for i in imlist:
     images.append(cv2.imread('../images/Input/{}.jpg'.format(i)))
 stitcher = cv2.createStitcher() if imutils.is_cv3() else cv2.Stitcher_create()
