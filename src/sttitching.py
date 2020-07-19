@@ -37,11 +37,11 @@ def interpolation(img):
                                 find = True
                         except:
                             pass
-                        if radius == 2:
+                        if radius == 20:
                             find = True
                         radius += 1
-
     return cop_im
+
 
 def median_filter(img,sizeWindow):
     res = copy.deepcopy(img)
@@ -69,28 +69,7 @@ def max_filter(img,sizeWindow):
     return res
 
 
-def stitchIm(kps1,kps2,rgb_im1,rgb_im2,h):
-    size_im1 = rgb_im1.shape
-
-    size_im2 = rgb_im2.shape
-    S = 4
-    res_im = np.ones((int(size_im1[1]+S*size_im2[1]),int(size_im1[0]+S*size_im2[0]),3),dtype=np.uint8)
-    print(res_im.shape)
-    res_im[int(S/2)*rgb_im2.shape[0]:int(S/2)*rgb_im2.shape[0] + rgb_im1.shape[0]
-    , int(S/2)*rgb_im2.shape[1]:int(S/2)*rgb_im2.shape[1] + rgb_im1.shape[1]] = rgb_im1
-
-    for i in range(0,size_im2[0]):
-        for j in range(0,size_im2[1]):
-            xnew = int( ((h[0,0]*j)+(h[0,1]*i)+h[0,2]) /
-                        ((h[2,0]*j)+(h[2,1]*i)+h[2,2]))
-            ynew = int( ((h[1,0]*j)+(h[1,1]*i)+h[1,2])
-                        /((h[2,0]*j)+(h[2,1]*i)+h[2,2]))
-            # xnew = int( ((h[0,0]*j)+(h[0,1]*i)+h[0,2]) )
-            # ynew = int( ((h[1,0]*j)+(h[1,1]*i)+h[1,2]))
-            xnew += int(S/2)*size_im2[1]
-            ynew += int(S/2)*size_im2[0]
-            for k in range(3):
-                res_im[ynew,xnew,k] = rgb_im2[i,j,k]
+def crop(res_im):
     xmax = np.argmax(res_im, axis=1)
     minRow = 0
     for i in range(xmax.shape[0]):
@@ -118,21 +97,33 @@ def stitchIm(kps1,kps2,rgb_im1,rgb_im2,h):
             maxCol = i
             print(maxCol)
             break;
-    res_im = res_im[minRow:maxRow,minCol:maxCol,:]
+    return res_im[minRow:maxRow,minCol:maxCol,:]
 
-    # fp = res_im[:,:,2]
-    # Fuv = np.fft.fft2(fp)
-    # FuvA,FuvP = toPolar(Fuv)
-    # FuvA = np.fft.fftshift(FuvA)
-    # FuvA += 1
-    # showRES = np.log10(FuvA)
-    # min = np.min(showRES)
-    # max = np.max(showRES)
-    # showRES = normalizeimg(showRES,min,max)
 
-    # res_im = max_filter(res_im,(3,3))
-    # print("median1")
-    cv2.imwrite("res.jpg",res_im)
-    # cv2.imwrite("freqRes.jpg",showRES)
+def stitchIm(kps1,kps2,rgb_im1,rgb_im2,h):
+    size_im1 = rgb_im1.shape
+
+    size_im2 = rgb_im2.shape
+    S = 4
+    res_im = np.ones((int(size_im1[1]+S*size_im2[1]),int(size_im1[0]+S*size_im2[0]),3),dtype='uint8')
+    print(res_im.shape)
+    res_im[int(S/2)*rgb_im2.shape[0]:int(S/2)*rgb_im2.shape[0] + rgb_im1.shape[0]
+    , int(S/2)*rgb_im2.shape[1]:int(S/2)*rgb_im2.shape[1] + rgb_im1.shape[1]] = rgb_im1
+
+    for i in range(0,size_im2[0]):
+        for j in range(0,size_im2[1]):
+            xnew = int( ((h[0,0]*j)+(h[0,1]*i)+h[0,2]) /
+                        ((h[2,0]*j)+(h[2,1]*i)+h[2,2]))
+            ynew = int( ((h[1,0]*j)+(h[1,1]*i)+h[1,2])
+                        /((h[2,0]*j)+(h[2,1]*i)+h[2,2]))
+            # xnew = int( ((h[0,0]*j)+(h[0,1]*i)+h[0,2]) )
+            # ynew = int( ((h[1,0]*j)+(h[1,1]*i)+h[1,2]))
+            xnew += int(S/2)*size_im2[1]
+            ynew += int(S/2)*size_im2[0]
+            for k in range(3):
+                res_im[ynew,xnew,k] = rgb_im2[i,j,k]
+
+    res_im = crop(res_im)
+
     return res_im
 
